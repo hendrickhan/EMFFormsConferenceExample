@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="conference" nsURI="http://eclipsesource.com/conference/model"
+    nsPrefix="com.eclipsesource.conference.model">
+  <eClassifiers xsi:type="ecore:EClass" name="Registration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="personalData" eType="#//PersonalData"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nutritionInformation" eType="#//NutritionInformation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentData" eType="#//PaymentData"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="registrationTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonalData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1" eType="#//Title"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//Gender"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Title">
+    <eLiterals name="Mrs"/>
+    <eLiterals name="Mr" value="1"/>
+    <eLiterals name="Dr" value="2" literal="Dr."/>
+    <eLiterals name="Prof" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Gender">
+    <eLiterals name="Female"/>
+    <eLiterals name="Male" value="1" literal="Male"/>
+    <eLiterals name="Undefined" value="2" literal="Dr."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NutritionInformation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diet" eType="#//Diet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foodRestrictions" eType="#//FoodRestrictions"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Diet">
+    <eLiterals name="Carnivore"/>
+    <eLiterals name="Vegetarian" value="1"/>
+    <eLiterals name="Vegan" value="2"/>
+    <eLiterals name="Fruitarian" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FoodRestrictions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peanuts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lactose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="other" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gluten" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pork" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creditCardType" lowerBound="1"
+        eType="#//CreditCardType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardholder" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardnumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expirationMonth" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expirationYear" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CVV" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CreditCardType">
+    <eLiterals name="Visa"/>
+    <eLiterals name="Mastercard" value="1"/>
+    <eLiterals name="AmericanExpress"/>
+  </eClassifiers>
+</ecore:EPackage>

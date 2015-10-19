@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.categorization.model="http://org/eclipse/emf/ecp/view/categorization/model" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.label.model="http://org/eclipse/emf/ecp/view/label/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmlns:org.eclipse.emf.ecp.view.rule.model="http://org/eclipse/emf/ecp/view/rule/model" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" xmi:id="_QSUQ4HZpEeW7xN-kAnuazQ" name="Registration" ecorePath="/com.eclipsesource.conference.model/model/conference.ecore">
+  <rootEClass href="http://eclipsesource.com/conference/model#//Registration"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.categorization.model:CategorizationElement" xmi:id="_Uhx68HZpEeW7xN-kAnuazQ">
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_VNqwkHZpEeW7xN-kAnuazQ" name="General Information">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_ymlLUHZpEeW7xN-kAnuazQ">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GR2cEHZqEeW7xN-kAnuazQ" name="Control firstName">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GR2cEXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PersonalData/firstName"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/personalData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GR6GcHZqEeW7xN-kAnuazQ" name="Control lastName">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GR6GcXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PersonalData/lastName"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/personalData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GR8isHZqEeW7xN-kAnuazQ" name="Control title">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GR8isXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PersonalData/title"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/personalData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GR-X4HZqEeW7xN-kAnuazQ" name="Control gender">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GR-X4XZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PersonalData/gender"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/personalData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_zSLTwHZuEeWuMa7nVF6R7w" name="Control dateOfBirth">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_zSLTwXZuEeWuMa7nVF6R7w">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PersonalData/dateOfBirth"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/personalData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_-s4pcHajEeWLAYJDQqEFuA" name="Control registrationTime" readonly="true">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_-s4pcXajEeWLAYJDQqEFuA">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//Registration/registrationTime"/>
+          </domainModelReference>
+        </children>
+      </composite>
+    </categorizations>
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_V_ufoHZpEeW7xN-kAnuazQ" name="Dietrary Requirements">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_ISAV8HZqEeW7xN-kAnuazQ">
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" xmi:id="_SGqhkHakEeWLAYJDQqEFuA" name=" This is all optional information, but it helps us to serve you better with the right foods for you." readonly="true"/>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_KnHMIHZqEeW7xN-kAnuazQ" name="Control diet">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_KnHMIXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//NutritionInformation/diet"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_lgVsAHakEeWLAYJDQqEFuA" name="Food Restrictions">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_Ux2h0HZqEeW7xN-kAnuazQ" name="Control gluten">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_Ux2h0XZqEeW7xN-kAnuazQ">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//FoodRestrictions/gluten"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//NutritionInformation/foodRestrictions"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_Ux3v8HZqEeW7xN-kAnuazQ" name="Control lactose">
+            <attachments xsi:type="org.eclipse.emf.ecp.view.rule.model:EnableRule" xmi:id="_HH2gEHajEeWLAYJDQqEFuA" disable="true">
+              <condition xsi:type="org.eclipse.emf.ecp.view.rule.model:OrCondition" xmi:id="_hAkKgHajEeWLAYJDQqEFuA">
+                <conditions xsi:type="org.eclipse.emf.ecp.view.rule.model:LeafCondition" xmi:id="_hrZQMHajEeWLAYJDQqEFuA" expectedValue="ACED0005740005566567616E">
+                  <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_inMKEHajEeWLAYJDQqEFuA">
+                    <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//NutritionInformation/diet"/>
+                    <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+                  </domainModelReference>
+                </conditions>
+                <conditions xsi:type="org.eclipse.emf.ecp.view.rule.model:LeafCondition" xmi:id="_h_kJYHajEeWLAYJDQqEFuA" expectedValue="ACED000574000A4672756974617269616E">
+                  <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_i4IwIHajEeWLAYJDQqEFuA">
+                    <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//NutritionInformation/diet"/>
+                    <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+                  </domainModelReference>
+                </conditions>
+              </condition>
+            </attachments>
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_Ux3v8XZqEeW7xN-kAnuazQ">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//FoodRestrictions/lactose"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//NutritionInformation/foodRestrictions"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_7lM8QHaiEeWLAYJDQqEFuA" name="Control pork">
+            <attachments xsi:type="org.eclipse.emf.ecp.view.rule.model:ShowRule" xmi:id="_9D4gwHaiEeWLAYJDQqEFuA">
+              <condition xsi:type="org.eclipse.emf.ecp.view.rule.model:LeafCondition" xmi:id="__E2S8HaiEeWLAYJDQqEFuA" expectedValue="ACED00057400094361726E69766F7265">
+                <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_Bl1pAHajEeWLAYJDQqEFuA">
+                  <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//NutritionInformation/diet"/>
+                  <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+                </domainModelReference>
+              </condition>
+            </attachments>
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_7lM8QXaiEeWLAYJDQqEFuA">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//FoodRestrictions/pork"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//NutritionInformation/foodRestrictions"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_Ux1TsHZqEeW7xN-kAnuazQ" name="Control peanuts">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_Ux1TsXZqEeW7xN-kAnuazQ">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//FoodRestrictions/peanuts"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//NutritionInformation/foodRestrictions"/>
+            </domainModelReference>
+          </children>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_Ux6zQHZqEeW7xN-kAnuazQ" name="Control other">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_Ux6zQXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//FoodRestrictions/other"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/nutritionInformation"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//NutritionInformation/foodRestrictions"/>
+          </domainModelReference>
+        </children>
+      </composite>
+    </categorizations>
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_WVLyQHZpEeW7xN-kAnuazQ" name="Payment Information">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_gK758HZqEeW7xN-kAnuazQ">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_ibY5oHZqEeW7xN-kAnuazQ" name="Control creditCardType">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_ibY5oXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PaymentData/creditCardType"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/paymentData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_icFdMHZqEeW7xN-kAnuazQ" name="Control cardholder">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_icFdMXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PaymentData/cardholder"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/paymentData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_icwLkHZqEeW7xN-kAnuazQ" name="Control cardnumber">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_icwLkXZqEeW7xN-kAnuazQ">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PaymentData/cardnumber"/>
+            <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/paymentData"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" xmi:id="_ka89oHZqEeW7xN-kAnuazQ">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_idSXEHZqEeW7xN-kAnuazQ" name="Control expirationMonth">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_idSXEXZqEeW7xN-kAnuazQ">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PaymentData/expirationMonth"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/paymentData"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_id4M8HZqEeW7xN-kAnuazQ" name="Control expirationYear">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_id4M8XZqEeW7xN-kAnuazQ">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PaymentData/expirationYear"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/paymentData"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_ieZxYHZqEeW7xN-kAnuazQ" name="Control CVV">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_ieZxYXZqEeW7xN-kAnuazQ">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//PaymentData/CVV"/>
+              <domainModelEReferencePath href="http://eclipsesource.com/conference/model#//Registration/paymentData"/>
+            </domainModelReference>
+          </children>
+        </children>
+      </composite>
+    </categorizations>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_3h8swHajEeWLAYJDQqEFuA" name="  registrationID" readonly="true">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_5kM4YHajEeWLAYJDQqEFuA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://eclipsesource.com/conference/model#//Registration/id"/>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>
