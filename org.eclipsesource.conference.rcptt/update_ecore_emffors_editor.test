@@ -7,7 +7,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _YsP3cHiyEeWIG4xkmhBNIw
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 10/22/15 3:17 PM
+Save-Time: 10/26/15 6:29 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -63,6 +63,9 @@ with [get-window "Create new EEnum"] {
         apply-cell-edit -deactivate
         activate-cell-edit -column 1
        	get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        activate-cell-edit -column 3
+       	get-editbox | set-text "Dr."
         apply-cell-edit -deactivate
     }
     get-button "Add an instance of EEnumLiteral" | click
@@ -251,6 +254,7 @@ get-editor "conference.ecore" | get-tree
 with [get-window "Create new EReference"] {
     get-editbox -after [get-label Name] | set-text foodRestrictions
     get-combo -after [get-label EType] | select FoodRestrictions
+    get-button -after [get-label Containment] | check
     get-button OK | click
 }
 get-editor "conference.ecore" | get-tree 
@@ -344,6 +348,4 @@ with [get-editor "conference.ecore" | get-tree] {
     select "platform:\\/resource\\/com.eclipsesource.conference.model\\/model\\/conference.ecore/conference" 
         | key-type "M1+s"
 }
-
-
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
