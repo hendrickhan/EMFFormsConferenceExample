@@ -2,6 +2,7 @@
  */
 package conference;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link conference.PersonalData#getFirstName <em>First Name</em>}</li>
  *   <li>{@link conference.PersonalData#getLastName <em>Last Name</em>}</li>
  *   <li>{@link conference.PersonalData#getTitle <em>Title</em>}</li>
+ *   <li>{@link conference.PersonalData#getDateOfBirth <em>Date Of Birth</em>}</li>
  *   <li>{@link conference.PersonalData#getGender <em>Gender</em>}</li>
  * </ul>
  *
@@ -35,7 +37,7 @@ public interface PersonalData extends EObject {
 	 * @return the value of the '<em>First Name</em>' attribute.
 	 * @see #setFirstName(String)
 	 * @see conference.ConferencePackage#getPersonalData_FirstName()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getFirstName();
@@ -61,7 +63,7 @@ public interface PersonalData extends EObject {
 	 * @return the value of the '<em>Last Name</em>' attribute.
 	 * @see #setLastName(String)
 	 * @see conference.ConferencePackage#getPersonalData_LastName()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getLastName();
@@ -89,7 +91,7 @@ public interface PersonalData extends EObject {
 	 * @see conference.Title
 	 * @see #setTitle(Title)
 	 * @see conference.ConferencePackage#getPersonalData_Title()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Title getTitle();
@@ -104,6 +106,32 @@ public interface PersonalData extends EObject {
 	 * @generated
 	 */
 	void setTitle(Title value);
+
+	/**
+	 * Returns the value of the '<em><b>Date Of Birth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Date Of Birth</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Date Of Birth</em>' attribute.
+	 * @see #setDateOfBirth(Date)
+	 * @see conference.ConferencePackage#getPersonalData_DateOfBirth()
+	 * @model
+	 * @generated
+	 */
+	Date getDateOfBirth();
+
+	/**
+	 * Sets the value of the '{@link conference.PersonalData#getDateOfBirth <em>Date Of Birth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Date Of Birth</em>' attribute.
+	 * @see #getDateOfBirth()
+	 * @generated
+	 */
+	void setDateOfBirth(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Gender</b></em>' attribute.

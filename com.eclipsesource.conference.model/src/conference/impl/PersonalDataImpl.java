@@ -7,6 +7,7 @@ import conference.Gender;
 import conference.PersonalData;
 import conference.Title;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link conference.impl.PersonalDataImpl#getFirstName <em>First Name</em>}</li>
  *   <li>{@link conference.impl.PersonalDataImpl#getLastName <em>Last Name</em>}</li>
  *   <li>{@link conference.impl.PersonalDataImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link conference.impl.PersonalDataImpl#getDateOfBirth <em>Date Of Birth</em>}</li>
  *   <li>{@link conference.impl.PersonalDataImpl#getGender <em>Gender</em>}</li>
  * </ul>
  *
@@ -90,6 +92,26 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 	 * @ordered
 	 */
 	protected Title title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDateOfBirth() <em>Date Of Birth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDateOfBirth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date DATE_OF_BIRTH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDateOfBirth() <em>Date Of Birth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDateOfBirth()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date dateOfBirth = DATE_OF_BIRTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getGender() <em>Gender</em>}' attribute.
@@ -198,6 +220,27 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDateOfBirth(Date newDateOfBirth) {
+		Date oldDateOfBirth = dateOfBirth;
+		dateOfBirth = newDateOfBirth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.PERSONAL_DATA__DATE_OF_BIRTH, oldDateOfBirth, dateOfBirth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Gender getGender() {
 		return gender;
 	}
@@ -228,6 +271,8 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 				return getLastName();
 			case ConferencePackage.PERSONAL_DATA__TITLE:
 				return getTitle();
+			case ConferencePackage.PERSONAL_DATA__DATE_OF_BIRTH:
+				return getDateOfBirth();
 			case ConferencePackage.PERSONAL_DATA__GENDER:
 				return getGender();
 		}
@@ -250,6 +295,9 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 				return;
 			case ConferencePackage.PERSONAL_DATA__TITLE:
 				setTitle((Title)newValue);
+				return;
+			case ConferencePackage.PERSONAL_DATA__DATE_OF_BIRTH:
+				setDateOfBirth((Date)newValue);
 				return;
 			case ConferencePackage.PERSONAL_DATA__GENDER:
 				setGender((Gender)newValue);
@@ -275,6 +323,9 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 			case ConferencePackage.PERSONAL_DATA__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
+			case ConferencePackage.PERSONAL_DATA__DATE_OF_BIRTH:
+				setDateOfBirth(DATE_OF_BIRTH_EDEFAULT);
+				return;
 			case ConferencePackage.PERSONAL_DATA__GENDER:
 				setGender(GENDER_EDEFAULT);
 				return;
@@ -296,6 +347,8 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
 			case ConferencePackage.PERSONAL_DATA__TITLE:
 				return title != TITLE_EDEFAULT;
+			case ConferencePackage.PERSONAL_DATA__DATE_OF_BIRTH:
+				return DATE_OF_BIRTH_EDEFAULT == null ? dateOfBirth != null : !DATE_OF_BIRTH_EDEFAULT.equals(dateOfBirth);
 			case ConferencePackage.PERSONAL_DATA__GENDER:
 				return gender != GENDER_EDEFAULT;
 		}
@@ -318,6 +371,8 @@ public class PersonalDataImpl extends MinimalEObjectImpl.Container implements Pe
 		result.append(lastName);
 		result.append(", title: ");
 		result.append(title);
+		result.append(", dateOfBirth: ");
+		result.append(dateOfBirth);
 		result.append(", gender: ");
 		result.append(gender);
 		result.append(')');

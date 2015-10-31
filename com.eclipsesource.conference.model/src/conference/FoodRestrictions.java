@@ -14,9 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link conference.FoodRestrictions#isPeanuts <em>Peanuts</em>}</li>
- *   <li>{@link conference.FoodRestrictions#isGluten <em>Gluten</em>}</li>
  *   <li>{@link conference.FoodRestrictions#isLactose <em>Lactose</em>}</li>
  *   <li>{@link conference.FoodRestrictions#getOther <em>Other</em>}</li>
+ *   <li>{@link conference.FoodRestrictions#isGluten <em>Gluten</em>}</li>
+ *   <li>{@link conference.FoodRestrictions#isPork <em>Pork</em>}</li>
  * </ul>
  *
  * @see conference.ConferencePackage#getFoodRestrictions()
@@ -75,6 +76,32 @@ public interface FoodRestrictions extends EObject {
 	 * @generated
 	 */
 	void setGluten(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Pork</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pork</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pork</em>' attribute.
+	 * @see #setPork(boolean)
+	 * @see conference.ConferencePackage#getFoodRestrictions_Pork()
+	 * @model
+	 * @generated
+	 */
+	boolean isPork();
+
+	/**
+	 * Sets the value of the '{@link conference.FoodRestrictions#isPork <em>Pork</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pork</em>' attribute.
+	 * @see #isPork()
+	 * @generated
+	 */
+	void setPork(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Lactose</b></em>' attribute.

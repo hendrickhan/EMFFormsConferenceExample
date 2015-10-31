@@ -25,8 +25,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link conference.impl.NutritionInformationImpl#getDiet <em>Diet</em>}</li>
- *   <li>{@link conference.impl.NutritionInformationImpl#isKosher <em>Kosher</em>}</li>
- *   <li>{@link conference.impl.NutritionInformationImpl#isHalal <em>Halal</em>}</li>
  *   <li>{@link conference.impl.NutritionInformationImpl#getFoodRestrictions <em>Food Restrictions</em>}</li>
  * </ul>
  *
@@ -52,46 +50,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected Diet diet = DIET_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isKosher() <em>Kosher</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isKosher()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean KOSHER_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isKosher() <em>Kosher</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isKosher()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean kosher = KOSHER_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isHalal() <em>Halal</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isHalal()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean HALAL_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isHalal() <em>Halal</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isHalal()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean halal = HALAL_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFoodRestrictions() <em>Food Restrictions</em>}' containment reference.
@@ -141,48 +99,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 		diet = newDiet == null ? DIET_EDEFAULT : newDiet;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.NUTRITION_INFORMATION__DIET, oldDiet, diet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isKosher() {
-		return kosher;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setKosher(boolean newKosher) {
-		boolean oldKosher = kosher;
-		kosher = newKosher;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.NUTRITION_INFORMATION__KOSHER, oldKosher, kosher));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isHalal() {
-		return halal;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHalal(boolean newHalal) {
-		boolean oldHalal = halal;
-		halal = newHalal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.NUTRITION_INFORMATION__HALAL, oldHalal, halal));
 	}
 
 	/**
@@ -252,10 +168,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ConferencePackage.NUTRITION_INFORMATION__DIET:
 				return getDiet();
-			case ConferencePackage.NUTRITION_INFORMATION__KOSHER:
-				return isKosher();
-			case ConferencePackage.NUTRITION_INFORMATION__HALAL:
-				return isHalal();
 			case ConferencePackage.NUTRITION_INFORMATION__FOOD_RESTRICTIONS:
 				return getFoodRestrictions();
 		}
@@ -272,12 +184,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ConferencePackage.NUTRITION_INFORMATION__DIET:
 				setDiet((Diet)newValue);
-				return;
-			case ConferencePackage.NUTRITION_INFORMATION__KOSHER:
-				setKosher((Boolean)newValue);
-				return;
-			case ConferencePackage.NUTRITION_INFORMATION__HALAL:
-				setHalal((Boolean)newValue);
 				return;
 			case ConferencePackage.NUTRITION_INFORMATION__FOOD_RESTRICTIONS:
 				setFoodRestrictions((FoodRestrictions)newValue);
@@ -297,12 +203,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 			case ConferencePackage.NUTRITION_INFORMATION__DIET:
 				setDiet(DIET_EDEFAULT);
 				return;
-			case ConferencePackage.NUTRITION_INFORMATION__KOSHER:
-				setKosher(KOSHER_EDEFAULT);
-				return;
-			case ConferencePackage.NUTRITION_INFORMATION__HALAL:
-				setHalal(HALAL_EDEFAULT);
-				return;
 			case ConferencePackage.NUTRITION_INFORMATION__FOOD_RESTRICTIONS:
 				setFoodRestrictions((FoodRestrictions)null);
 				return;
@@ -320,10 +220,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ConferencePackage.NUTRITION_INFORMATION__DIET:
 				return diet != DIET_EDEFAULT;
-			case ConferencePackage.NUTRITION_INFORMATION__KOSHER:
-				return kosher != KOSHER_EDEFAULT;
-			case ConferencePackage.NUTRITION_INFORMATION__HALAL:
-				return halal != HALAL_EDEFAULT;
 			case ConferencePackage.NUTRITION_INFORMATION__FOOD_RESTRICTIONS:
 				return foodRestrictions != null;
 		}
@@ -342,10 +238,6 @@ public class NutritionInformationImpl extends MinimalEObjectImpl.Container imple
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (diet: ");
 		result.append(diet);
-		result.append(", kosher: ");
-		result.append(kosher);
-		result.append(", halal: ");
-		result.append(halal);
 		result.append(')');
 		return result.toString();
 	}

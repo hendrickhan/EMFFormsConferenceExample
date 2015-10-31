@@ -14,8 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link conference.NutritionInformation#getDiet <em>Diet</em>}</li>
- *   <li>{@link conference.NutritionInformation#isKosher <em>Kosher</em>}</li>
- *   <li>{@link conference.NutritionInformation#isHalal <em>Halal</em>}</li>
  *   <li>{@link conference.NutritionInformation#getFoodRestrictions <em>Food Restrictions</em>}</li>
  * </ul>
  *
@@ -52,58 +50,6 @@ public interface NutritionInformation extends EObject {
 	 * @generated
 	 */
 	void setDiet(Diet value);
-
-	/**
-	 * Returns the value of the '<em><b>Kosher</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Kosher</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Kosher</em>' attribute.
-	 * @see #setKosher(boolean)
-	 * @see conference.ConferencePackage#getNutritionInformation_Kosher()
-	 * @model
-	 * @generated
-	 */
-	boolean isKosher();
-
-	/**
-	 * Sets the value of the '{@link conference.NutritionInformation#isKosher <em>Kosher</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Kosher</em>' attribute.
-	 * @see #isKosher()
-	 * @generated
-	 */
-	void setKosher(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Halal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Halal</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Halal</em>' attribute.
-	 * @see #setHalal(boolean)
-	 * @see conference.ConferencePackage#getNutritionInformation_Halal()
-	 * @model
-	 * @generated
-	 */
-	boolean isHalal();
-
-	/**
-	 * Sets the value of the '{@link conference.NutritionInformation#isHalal <em>Halal</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Halal</em>' attribute.
-	 * @see #isHalal()
-	 * @generated
-	 */
-	void setHalal(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Food Restrictions</b></em>' containment reference.

@@ -80,7 +80,7 @@ public class PaymentDataImpl extends MinimalEObjectImpl.Container implements Pay
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CARDNUMBER_EDEFAULT = null;
+	protected static final int CARDNUMBER_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getCardnumber() <em>Cardnumber</em>}' attribute.
@@ -90,7 +90,7 @@ public class PaymentDataImpl extends MinimalEObjectImpl.Container implements Pay
 	 * @generated
 	 * @ordered
 	 */
-	protected String cardnumber = CARDNUMBER_EDEFAULT;
+	protected int cardnumber = CARDNUMBER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getExpirationMonth() <em>Expiration Month</em>}' attribute.
@@ -218,7 +218,7 @@ public class PaymentDataImpl extends MinimalEObjectImpl.Container implements Pay
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCardnumber() {
+	public int getCardnumber() {
 		return cardnumber;
 	}
 
@@ -227,8 +227,8 @@ public class PaymentDataImpl extends MinimalEObjectImpl.Container implements Pay
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCardnumber(String newCardnumber) {
-		String oldCardnumber = cardnumber;
+	public void setCardnumber(int newCardnumber) {
+		int oldCardnumber = cardnumber;
 		cardnumber = newCardnumber;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.PAYMENT_DATA__CARDNUMBER, oldCardnumber, cardnumber));
@@ -336,7 +336,7 @@ public class PaymentDataImpl extends MinimalEObjectImpl.Container implements Pay
 				setCardholder((String)newValue);
 				return;
 			case ConferencePackage.PAYMENT_DATA__CARDNUMBER:
-				setCardnumber((String)newValue);
+				setCardnumber((Integer)newValue);
 				return;
 			case ConferencePackage.PAYMENT_DATA__EXPIRATION_MONTH:
 				setExpirationMonth((Integer)newValue);
@@ -394,7 +394,7 @@ public class PaymentDataImpl extends MinimalEObjectImpl.Container implements Pay
 			case ConferencePackage.PAYMENT_DATA__CARDHOLDER:
 				return CARDHOLDER_EDEFAULT == null ? cardholder != null : !CARDHOLDER_EDEFAULT.equals(cardholder);
 			case ConferencePackage.PAYMENT_DATA__CARDNUMBER:
-				return CARDNUMBER_EDEFAULT == null ? cardnumber != null : !CARDNUMBER_EDEFAULT.equals(cardnumber);
+				return cardnumber != CARDNUMBER_EDEFAULT;
 			case ConferencePackage.PAYMENT_DATA__EXPIRATION_MONTH:
 				return expirationMonth != EXPIRATION_MONTH_EDEFAULT;
 			case ConferencePackage.PAYMENT_DATA__EXPIRATION_YEAR:

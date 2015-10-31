@@ -39,7 +39,7 @@ public interface PaymentData extends EObject {
 	 * @see conference.CreditCardType
 	 * @see #setCreditCardType(CreditCardType)
 	 * @see conference.ConferencePackage#getPaymentData_CreditCardType()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	CreditCardType getCreditCardType();
@@ -66,7 +66,7 @@ public interface PaymentData extends EObject {
 	 * @return the value of the '<em>Cardholder</em>' attribute.
 	 * @see #setCardholder(String)
 	 * @see conference.ConferencePackage#getPaymentData_Cardholder()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getCardholder();
@@ -90,12 +90,12 @@ public interface PaymentData extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cardnumber</em>' attribute.
-	 * @see #setCardnumber(String)
+	 * @see #setCardnumber(int)
 	 * @see conference.ConferencePackage#getPaymentData_Cardnumber()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	String getCardnumber();
+	int getCardnumber();
 
 	/**
 	 * Sets the value of the '{@link conference.PaymentData#getCardnumber <em>Cardnumber</em>}' attribute.
@@ -105,7 +105,7 @@ public interface PaymentData extends EObject {
 	 * @see #getCardnumber()
 	 * @generated
 	 */
-	void setCardnumber(String value);
+	void setCardnumber(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Expiration Month</b></em>' attribute.
@@ -118,7 +118,7 @@ public interface PaymentData extends EObject {
 	 * @return the value of the '<em>Expiration Month</em>' attribute.
 	 * @see #setExpirationMonth(int)
 	 * @see conference.ConferencePackage#getPaymentData_ExpirationMonth()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getExpirationMonth();
@@ -144,7 +144,7 @@ public interface PaymentData extends EObject {
 	 * @return the value of the '<em>Expiration Year</em>' attribute.
 	 * @see #setExpirationYear(int)
 	 * @see conference.ConferencePackage#getPaymentData_ExpirationYear()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getExpirationYear();
@@ -170,7 +170,7 @@ public interface PaymentData extends EObject {
 	 * @return the value of the '<em>CVV</em>' attribute.
 	 * @see #setCVV(int)
 	 * @see conference.ConferencePackage#getPaymentData_CVV()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getCVV();

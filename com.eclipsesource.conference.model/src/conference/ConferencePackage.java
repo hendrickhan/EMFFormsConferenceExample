@@ -104,13 +104,22 @@ public interface ConferencePackage extends EPackage {
 	int REGISTRATION__PAYMENT_DATA = 3;
 
 	/**
+	 * The feature id for the '<em><b>Registration Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION__REGISTRATION_TIME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Registration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_FEATURE_COUNT = 4;
+	int REGISTRATION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Registration</em>' class.
@@ -159,13 +168,22 @@ public interface ConferencePackage extends EPackage {
 	int PERSONAL_DATA__TITLE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Date Of Birth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONAL_DATA__DATE_OF_BIRTH = 3;
+
+	/**
 	 * The feature id for the '<em><b>Gender</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSONAL_DATA__GENDER = 3;
+	int PERSONAL_DATA__GENDER = 4;
 
 	/**
 	 * The number of structural features of the '<em>Personal Data</em>' class.
@@ -174,7 +192,7 @@ public interface ConferencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSONAL_DATA_FEATURE_COUNT = 4;
+	int PERSONAL_DATA_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Personal Data</em>' class.
@@ -205,31 +223,13 @@ public interface ConferencePackage extends EPackage {
 	int NUTRITION_INFORMATION__DIET = 0;
 
 	/**
-	 * The feature id for the '<em><b>Kosher</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTRITION_INFORMATION__KOSHER = 1;
-
-	/**
-	 * The feature id for the '<em><b>Halal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTRITION_INFORMATION__HALAL = 2;
-
-	/**
 	 * The feature id for the '<em><b>Food Restrictions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NUTRITION_INFORMATION__FOOD_RESTRICTIONS = 3;
+	int NUTRITION_INFORMATION__FOOD_RESTRICTIONS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Nutrition Information</em>' class.
@@ -238,7 +238,7 @@ public interface ConferencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUTRITION_INFORMATION_FEATURE_COUNT = 4;
+	int NUTRITION_INFORMATION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Nutrition Information</em>' class.
@@ -269,22 +269,13 @@ public interface ConferencePackage extends EPackage {
 	int FOOD_RESTRICTIONS__PEANUTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Gluten</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOOD_RESTRICTIONS__GLUTEN = 1;
-
-	/**
 	 * The feature id for the '<em><b>Lactose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOOD_RESTRICTIONS__LACTOSE = 2;
+	int FOOD_RESTRICTIONS__LACTOSE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Other</b></em>' attribute.
@@ -293,7 +284,25 @@ public interface ConferencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOOD_RESTRICTIONS__OTHER = 3;
+	int FOOD_RESTRICTIONS__OTHER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Gluten</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOOD_RESTRICTIONS__GLUTEN = 3;
+
+	/**
+	 * The feature id for the '<em><b>Pork</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOOD_RESTRICTIONS__PORK = 4;
 
 	/**
 	 * The number of structural features of the '<em>Food Restrictions</em>' class.
@@ -302,7 +311,7 @@ public interface ConferencePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOOD_RESTRICTIONS_FEATURE_COUNT = 4;
+	int FOOD_RESTRICTIONS_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Food Restrictions</em>' class.
@@ -491,6 +500,17 @@ public interface ConferencePackage extends EPackage {
 	EReference getRegistration_PaymentData();
 
 	/**
+	 * Returns the meta object for the attribute '{@link conference.Registration#getRegistrationTime <em>Registration Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Registration Time</em>'.
+	 * @see conference.Registration#getRegistrationTime()
+	 * @see #getRegistration()
+	 * @generated
+	 */
+	EAttribute getRegistration_RegistrationTime();
+
+	/**
 	 * Returns the meta object for class '{@link conference.PersonalData <em>Personal Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -534,6 +554,17 @@ public interface ConferencePackage extends EPackage {
 	EAttribute getPersonalData_Title();
 
 	/**
+	 * Returns the meta object for the attribute '{@link conference.PersonalData#getDateOfBirth <em>Date Of Birth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date Of Birth</em>'.
+	 * @see conference.PersonalData#getDateOfBirth()
+	 * @see #getPersonalData()
+	 * @generated
+	 */
+	EAttribute getPersonalData_DateOfBirth();
+
+	/**
 	 * Returns the meta object for the attribute '{@link conference.PersonalData#getGender <em>Gender</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -564,28 +595,6 @@ public interface ConferencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNutritionInformation_Diet();
-
-	/**
-	 * Returns the meta object for the attribute '{@link conference.NutritionInformation#isKosher <em>Kosher</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Kosher</em>'.
-	 * @see conference.NutritionInformation#isKosher()
-	 * @see #getNutritionInformation()
-	 * @generated
-	 */
-	EAttribute getNutritionInformation_Kosher();
-
-	/**
-	 * Returns the meta object for the attribute '{@link conference.NutritionInformation#isHalal <em>Halal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Halal</em>'.
-	 * @see conference.NutritionInformation#isHalal()
-	 * @see #getNutritionInformation()
-	 * @generated
-	 */
-	EAttribute getNutritionInformation_Halal();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link conference.NutritionInformation#getFoodRestrictions <em>Food Restrictions</em>}'.
@@ -629,6 +638,17 @@ public interface ConferencePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFoodRestrictions_Gluten();
+
+	/**
+	 * Returns the meta object for the attribute '{@link conference.FoodRestrictions#isPork <em>Pork</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pork</em>'.
+	 * @see conference.FoodRestrictions#isPork()
+	 * @see #getFoodRestrictions()
+	 * @generated
+	 */
+	EAttribute getFoodRestrictions_Pork();
 
 	/**
 	 * Returns the meta object for the attribute '{@link conference.FoodRestrictions#isLactose <em>Lactose</em>}'.
@@ -834,6 +854,14 @@ public interface ConferencePackage extends EPackage {
 		EReference REGISTRATION__PAYMENT_DATA = eINSTANCE.getRegistration_PaymentData();
 
 		/**
+		 * The meta object literal for the '<em><b>Registration Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTRATION__REGISTRATION_TIME = eINSTANCE.getRegistration_RegistrationTime();
+
+		/**
 		 * The meta object literal for the '{@link conference.impl.PersonalDataImpl <em>Personal Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -868,6 +896,14 @@ public interface ConferencePackage extends EPackage {
 		EAttribute PERSONAL_DATA__TITLE = eINSTANCE.getPersonalData_Title();
 
 		/**
+		 * The meta object literal for the '<em><b>Date Of Birth</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONAL_DATA__DATE_OF_BIRTH = eINSTANCE.getPersonalData_DateOfBirth();
+
+		/**
 		 * The meta object literal for the '<em><b>Gender</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -892,22 +928,6 @@ public interface ConferencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NUTRITION_INFORMATION__DIET = eINSTANCE.getNutritionInformation_Diet();
-
-		/**
-		 * The meta object literal for the '<em><b>Kosher</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NUTRITION_INFORMATION__KOSHER = eINSTANCE.getNutritionInformation_Kosher();
-
-		/**
-		 * The meta object literal for the '<em><b>Halal</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NUTRITION_INFORMATION__HALAL = eINSTANCE.getNutritionInformation_Halal();
 
 		/**
 		 * The meta object literal for the '<em><b>Food Restrictions</b></em>' containment reference feature.
@@ -942,6 +962,14 @@ public interface ConferencePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FOOD_RESTRICTIONS__GLUTEN = eINSTANCE.getFoodRestrictions_Gluten();
+
+		/**
+		 * The meta object literal for the '<em><b>Pork</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FOOD_RESTRICTIONS__PORK = eINSTANCE.getFoodRestrictions_Pork();
 
 		/**
 		 * The meta object literal for the '<em><b>Lactose</b></em>' attribute feature.

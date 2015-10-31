@@ -65,8 +65,6 @@ public class NutritionInformationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDietPropertyDescriptor(object);
-			addKosherPropertyDescriptor(object);
-			addHalalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,50 +87,6 @@ public class NutritionInformationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Kosher feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addKosherPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NutritionInformation_kosher_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NutritionInformation_kosher_feature", "_UI_NutritionInformation_type"),
-				 ConferencePackage.Literals.NUTRITION_INFORMATION__KOSHER,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Halal feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHalalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NutritionInformation_halal_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NutritionInformation_halal_feature", "_UI_NutritionInformation_type"),
-				 ConferencePackage.Literals.NUTRITION_INFORMATION__HALAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -207,8 +161,6 @@ public class NutritionInformationItemProvider
 
 		switch (notification.getFeatureID(NutritionInformation.class)) {
 			case ConferencePackage.NUTRITION_INFORMATION__DIET:
-			case ConferencePackage.NUTRITION_INFORMATION__KOSHER:
-			case ConferencePackage.NUTRITION_INFORMATION__HALAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ConferencePackage.NUTRITION_INFORMATION__FOOD_RESTRICTIONS:

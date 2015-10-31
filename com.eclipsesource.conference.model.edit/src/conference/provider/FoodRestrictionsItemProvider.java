@@ -61,9 +61,10 @@ public class FoodRestrictionsItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPeanutsPropertyDescriptor(object);
-			addGlutenPropertyDescriptor(object);
 			addLactosePropertyDescriptor(object);
 			addOtherPropertyDescriptor(object);
+			addGlutenPropertyDescriptor(object);
+			addPorkPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -104,6 +105,28 @@ public class FoodRestrictionsItemProvider
 				 getString("_UI_FoodRestrictions_gluten_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FoodRestrictions_gluten_feature", "_UI_FoodRestrictions_type"),
 				 ConferencePackage.Literals.FOOD_RESTRICTIONS__GLUTEN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Pork feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPorkPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FoodRestrictions_pork_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FoodRestrictions_pork_feature", "_UI_FoodRestrictions_type"),
+				 ConferencePackage.Literals.FOOD_RESTRICTIONS__PORK,
 				 true,
 				 false,
 				 false,
@@ -193,9 +216,10 @@ public class FoodRestrictionsItemProvider
 
 		switch (notification.getFeatureID(FoodRestrictions.class)) {
 			case ConferencePackage.FOOD_RESTRICTIONS__PEANUTS:
-			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
 			case ConferencePackage.FOOD_RESTRICTIONS__LACTOSE:
 			case ConferencePackage.FOOD_RESTRICTIONS__OTHER:
+			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
+			case ConferencePackage.FOOD_RESTRICTIONS__PORK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

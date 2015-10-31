@@ -2,6 +2,7 @@
  */
 package conference;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link conference.Registration#getPersonalData <em>Personal Data</em>}</li>
  *   <li>{@link conference.Registration#getNutritionInformation <em>Nutrition Information</em>}</li>
  *   <li>{@link conference.Registration#getPaymentData <em>Payment Data</em>}</li>
+ *   <li>{@link conference.Registration#getRegistrationTime <em>Registration Time</em>}</li>
  * </ul>
  *
  * @see conference.ConferencePackage#getRegistration()
@@ -127,5 +129,31 @@ public interface Registration extends EObject {
 	 * @generated
 	 */
 	void setPaymentData(PaymentData value);
+
+	/**
+	 * Returns the value of the '<em><b>Registration Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Registration Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Registration Time</em>' attribute.
+	 * @see #setRegistrationTime(Date)
+	 * @see conference.ConferencePackage#getRegistration_RegistrationTime()
+	 * @model
+	 * @generated
+	 */
+	Date getRegistrationTime();
+
+	/**
+	 * Sets the value of the '{@link conference.Registration#getRegistrationTime <em>Registration Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Registration Time</em>' attribute.
+	 * @see #getRegistrationTime()
+	 * @generated
+	 */
+	void setRegistrationTime(Date value);
 
 } // Registration

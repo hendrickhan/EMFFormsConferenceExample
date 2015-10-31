@@ -63,6 +63,7 @@ public class PersonalDataItemProvider
 			addFirstNamePropertyDescriptor(object);
 			addLastNamePropertyDescriptor(object);
 			addTitlePropertyDescriptor(object);
+			addDateOfBirthPropertyDescriptor(object);
 			addGenderPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -135,6 +136,28 @@ public class PersonalDataItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Date Of Birth feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDateOfBirthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PersonalData_dateOfBirth_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PersonalData_dateOfBirth_feature", "_UI_PersonalData_type"),
+				 ConferencePackage.Literals.PERSONAL_DATA__DATE_OF_BIRTH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Gender feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,6 +220,7 @@ public class PersonalDataItemProvider
 			case ConferencePackage.PERSONAL_DATA__FIRST_NAME:
 			case ConferencePackage.PERSONAL_DATA__LAST_NAME:
 			case ConferencePackage.PERSONAL_DATA__TITLE:
+			case ConferencePackage.PERSONAL_DATA__DATE_OF_BIRTH:
 			case ConferencePackage.PERSONAL_DATA__GENDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

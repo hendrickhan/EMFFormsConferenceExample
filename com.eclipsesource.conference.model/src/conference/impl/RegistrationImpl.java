@@ -8,6 +8,7 @@ import conference.PaymentData;
 import conference.PersonalData;
 import conference.Registration;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link conference.impl.RegistrationImpl#getPersonalData <em>Personal Data</em>}</li>
  *   <li>{@link conference.impl.RegistrationImpl#getNutritionInformation <em>Nutrition Information</em>}</li>
  *   <li>{@link conference.impl.RegistrationImpl#getPaymentData <em>Payment Data</em>}</li>
+ *   <li>{@link conference.impl.RegistrationImpl#getRegistrationTime <em>Registration Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +85,26 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @ordered
 	 */
 	protected PaymentData paymentData;
+
+	/**
+	 * The default value of the '{@link #getRegistrationTime() <em>Registration Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegistrationTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date REGISTRATION_TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRegistrationTime() <em>Registration Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegistrationTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date registrationTime = REGISTRATION_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,6 +280,27 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getRegistrationTime() {
+		return registrationTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRegistrationTime(Date newRegistrationTime) {
+		Date oldRegistrationTime = registrationTime;
+		registrationTime = newRegistrationTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.REGISTRATION__REGISTRATION_TIME, oldRegistrationTime, registrationTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -287,6 +330,8 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 				return getNutritionInformation();
 			case ConferencePackage.REGISTRATION__PAYMENT_DATA:
 				return getPaymentData();
+			case ConferencePackage.REGISTRATION__REGISTRATION_TIME:
+				return getRegistrationTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -310,6 +355,9 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 				return;
 			case ConferencePackage.REGISTRATION__PAYMENT_DATA:
 				setPaymentData((PaymentData)newValue);
+				return;
+			case ConferencePackage.REGISTRATION__REGISTRATION_TIME:
+				setRegistrationTime((Date)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -335,6 +383,9 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 			case ConferencePackage.REGISTRATION__PAYMENT_DATA:
 				setPaymentData((PaymentData)null);
 				return;
+			case ConferencePackage.REGISTRATION__REGISTRATION_TIME:
+				setRegistrationTime(REGISTRATION_TIME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -355,6 +406,8 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 				return nutritionInformation != null;
 			case ConferencePackage.REGISTRATION__PAYMENT_DATA:
 				return paymentData != null;
+			case ConferencePackage.REGISTRATION__REGISTRATION_TIME:
+				return REGISTRATION_TIME_EDEFAULT == null ? registrationTime != null : !REGISTRATION_TIME_EDEFAULT.equals(registrationTime);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -371,6 +424,8 @@ public class RegistrationImpl extends MinimalEObjectImpl.Container implements Re
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
+		result.append(", registrationTime: ");
+		result.append(registrationTime);
 		result.append(')');
 		return result.toString();
 	}

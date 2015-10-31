@@ -203,6 +203,15 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRegistration_RegistrationTime() {
+		return (EAttribute)registrationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPersonalData() {
 		return personalDataEClass;
 	}
@@ -239,8 +248,17 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPersonalData_Gender() {
+	public EAttribute getPersonalData_DateOfBirth() {
 		return (EAttribute)personalDataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersonalData_Gender() {
+		return (EAttribute)personalDataEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -266,26 +284,8 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNutritionInformation_Kosher() {
-		return (EAttribute)nutritionInformationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNutritionInformation_Halal() {
-		return (EAttribute)nutritionInformationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getNutritionInformation_FoodRestrictions() {
-		return (EReference)nutritionInformationEClass.getEStructuralFeatures().get(3);
+		return (EReference)nutritionInformationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -312,7 +312,16 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 	 * @generated
 	 */
 	public EAttribute getFoodRestrictions_Gluten() {
-		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFoodRestrictions_Pork() {
+		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -321,7 +330,7 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 	 * @generated
 	 */
 	public EAttribute getFoodRestrictions_Lactose() {
-		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -330,7 +339,7 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 	 * @generated
 	 */
 	public EAttribute getFoodRestrictions_Other() {
-		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)foodRestrictionsEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -465,24 +474,25 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 		createEReference(registrationEClass, REGISTRATION__PERSONAL_DATA);
 		createEReference(registrationEClass, REGISTRATION__NUTRITION_INFORMATION);
 		createEReference(registrationEClass, REGISTRATION__PAYMENT_DATA);
+		createEAttribute(registrationEClass, REGISTRATION__REGISTRATION_TIME);
 
 		personalDataEClass = createEClass(PERSONAL_DATA);
 		createEAttribute(personalDataEClass, PERSONAL_DATA__FIRST_NAME);
 		createEAttribute(personalDataEClass, PERSONAL_DATA__LAST_NAME);
 		createEAttribute(personalDataEClass, PERSONAL_DATA__TITLE);
+		createEAttribute(personalDataEClass, PERSONAL_DATA__DATE_OF_BIRTH);
 		createEAttribute(personalDataEClass, PERSONAL_DATA__GENDER);
 
 		nutritionInformationEClass = createEClass(NUTRITION_INFORMATION);
 		createEAttribute(nutritionInformationEClass, NUTRITION_INFORMATION__DIET);
-		createEAttribute(nutritionInformationEClass, NUTRITION_INFORMATION__KOSHER);
-		createEAttribute(nutritionInformationEClass, NUTRITION_INFORMATION__HALAL);
 		createEReference(nutritionInformationEClass, NUTRITION_INFORMATION__FOOD_RESTRICTIONS);
 
 		foodRestrictionsEClass = createEClass(FOOD_RESTRICTIONS);
 		createEAttribute(foodRestrictionsEClass, FOOD_RESTRICTIONS__PEANUTS);
-		createEAttribute(foodRestrictionsEClass, FOOD_RESTRICTIONS__GLUTEN);
 		createEAttribute(foodRestrictionsEClass, FOOD_RESTRICTIONS__LACTOSE);
 		createEAttribute(foodRestrictionsEClass, FOOD_RESTRICTIONS__OTHER);
+		createEAttribute(foodRestrictionsEClass, FOOD_RESTRICTIONS__GLUTEN);
+		createEAttribute(foodRestrictionsEClass, FOOD_RESTRICTIONS__PORK);
 
 		paymentDataEClass = createEClass(PAYMENT_DATA);
 		createEAttribute(paymentDataEClass, PAYMENT_DATA__CREDIT_CARD_TYPE);
@@ -534,32 +544,33 @@ public class ConferencePackageImpl extends EPackageImpl implements ConferencePac
 		initEReference(getRegistration_PersonalData(), this.getPersonalData(), null, "personalData", null, 0, 1, Registration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRegistration_NutritionInformation(), this.getNutritionInformation(), null, "nutritionInformation", null, 0, 1, Registration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRegistration_PaymentData(), this.getPaymentData(), null, "paymentData", null, 0, 1, Registration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRegistration_RegistrationTime(), ecorePackage.getEDate(), "registrationTime", null, 0, 1, Registration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personalDataEClass, PersonalData.class, "PersonalData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPersonalData_FirstName(), ecorePackage.getEString(), "firstName", null, 0, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPersonalData_LastName(), ecorePackage.getEString(), "lastName", null, 0, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPersonalData_Title(), this.getTitle(), "title", null, 0, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersonalData_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersonalData_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersonalData_Title(), this.getTitle(), "title", null, 1, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersonalData_DateOfBirth(), ecorePackage.getEDate(), "dateOfBirth", null, 0, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPersonalData_Gender(), this.getGender(), "gender", null, 0, 1, PersonalData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nutritionInformationEClass, NutritionInformation.class, "NutritionInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNutritionInformation_Diet(), this.getDiet(), "diet", null, 0, 1, NutritionInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNutritionInformation_Kosher(), ecorePackage.getEBoolean(), "kosher", null, 0, 1, NutritionInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNutritionInformation_Halal(), ecorePackage.getEBoolean(), "halal", null, 0, 1, NutritionInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNutritionInformation_FoodRestrictions(), this.getFoodRestrictions(), null, "foodRestrictions", null, 0, 1, NutritionInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(foodRestrictionsEClass, FoodRestrictions.class, "FoodRestrictions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFoodRestrictions_Peanuts(), ecorePackage.getEBoolean(), "peanuts", null, 0, 1, FoodRestrictions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFoodRestrictions_Gluten(), ecorePackage.getEBoolean(), "gluten", null, 0, 1, FoodRestrictions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFoodRestrictions_Lactose(), ecorePackage.getEBoolean(), "lactose", null, 0, 1, FoodRestrictions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFoodRestrictions_Other(), ecorePackage.getEString(), "other", null, 0, 1, FoodRestrictions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFoodRestrictions_Gluten(), ecorePackage.getEBoolean(), "gluten", null, 0, 1, FoodRestrictions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFoodRestrictions_Pork(), ecorePackage.getEBoolean(), "pork", null, 0, 1, FoodRestrictions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(paymentDataEClass, PaymentData.class, "PaymentData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPaymentData_CreditCardType(), this.getCreditCardType(), "creditCardType", null, 0, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPaymentData_Cardholder(), ecorePackage.getEString(), "cardholder", null, 0, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPaymentData_Cardnumber(), ecorePackage.getEString(), "cardnumber", null, 0, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPaymentData_ExpirationMonth(), ecorePackage.getEInt(), "expirationMonth", null, 0, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPaymentData_ExpirationYear(), ecorePackage.getEInt(), "expirationYear", null, 0, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPaymentData_CVV(), ecorePackage.getEInt(), "CVV", null, 0, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPaymentData_CreditCardType(), this.getCreditCardType(), "creditCardType", null, 1, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPaymentData_Cardholder(), ecorePackage.getEString(), "cardholder", null, 1, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPaymentData_Cardnumber(), ecorePackage.getEInt(), "cardnumber", null, 1, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPaymentData_ExpirationMonth(), ecorePackage.getEInt(), "expirationMonth", null, 1, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPaymentData_ExpirationYear(), ecorePackage.getEInt(), "expirationYear", null, 1, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPaymentData_CVV(), ecorePackage.getEInt(), "CVV", null, 1, 1, PaymentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(titleEEnum, Title.class, "Title");

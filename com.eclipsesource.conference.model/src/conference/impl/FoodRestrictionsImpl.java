@@ -21,9 +21,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link conference.impl.FoodRestrictionsImpl#isPeanuts <em>Peanuts</em>}</li>
- *   <li>{@link conference.impl.FoodRestrictionsImpl#isGluten <em>Gluten</em>}</li>
  *   <li>{@link conference.impl.FoodRestrictionsImpl#isLactose <em>Lactose</em>}</li>
  *   <li>{@link conference.impl.FoodRestrictionsImpl#getOther <em>Other</em>}</li>
+ *   <li>{@link conference.impl.FoodRestrictionsImpl#isGluten <em>Gluten</em>}</li>
+ *   <li>{@link conference.impl.FoodRestrictionsImpl#isPork <em>Pork</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,26 +49,6 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected boolean peanuts = PEANUTS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isGluten() <em>Gluten</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isGluten()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean GLUTEN_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isGluten() <em>Gluten</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isGluten()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean gluten = GLUTEN_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isLactose() <em>Lactose</em>}' attribute.
@@ -108,6 +89,46 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected String other = OTHER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isGluten() <em>Gluten</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGluten()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GLUTEN_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isGluten() <em>Gluten</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGluten()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean gluten = GLUTEN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPork() <em>Pork</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPork()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PORK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPork() <em>Pork</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPork()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean pork = PORK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +196,27 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isPork() {
+		return pork;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPork(boolean newPork) {
+		boolean oldPork = pork;
+		pork = newPork;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConferencePackage.FOOD_RESTRICTIONS__PORK, oldPork, pork));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isLactose() {
 		return lactose;
 	}
@@ -222,12 +264,14 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ConferencePackage.FOOD_RESTRICTIONS__PEANUTS:
 				return isPeanuts();
-			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
-				return isGluten();
 			case ConferencePackage.FOOD_RESTRICTIONS__LACTOSE:
 				return isLactose();
 			case ConferencePackage.FOOD_RESTRICTIONS__OTHER:
 				return getOther();
+			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
+				return isGluten();
+			case ConferencePackage.FOOD_RESTRICTIONS__PORK:
+				return isPork();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,14 +287,17 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 			case ConferencePackage.FOOD_RESTRICTIONS__PEANUTS:
 				setPeanuts((Boolean)newValue);
 				return;
-			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
-				setGluten((Boolean)newValue);
-				return;
 			case ConferencePackage.FOOD_RESTRICTIONS__LACTOSE:
 				setLactose((Boolean)newValue);
 				return;
 			case ConferencePackage.FOOD_RESTRICTIONS__OTHER:
 				setOther((String)newValue);
+				return;
+			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
+				setGluten((Boolean)newValue);
+				return;
+			case ConferencePackage.FOOD_RESTRICTIONS__PORK:
+				setPork((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -267,14 +314,17 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 			case ConferencePackage.FOOD_RESTRICTIONS__PEANUTS:
 				setPeanuts(PEANUTS_EDEFAULT);
 				return;
-			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
-				setGluten(GLUTEN_EDEFAULT);
-				return;
 			case ConferencePackage.FOOD_RESTRICTIONS__LACTOSE:
 				setLactose(LACTOSE_EDEFAULT);
 				return;
 			case ConferencePackage.FOOD_RESTRICTIONS__OTHER:
 				setOther(OTHER_EDEFAULT);
+				return;
+			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
+				setGluten(GLUTEN_EDEFAULT);
+				return;
+			case ConferencePackage.FOOD_RESTRICTIONS__PORK:
+				setPork(PORK_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -290,12 +340,14 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ConferencePackage.FOOD_RESTRICTIONS__PEANUTS:
 				return peanuts != PEANUTS_EDEFAULT;
-			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
-				return gluten != GLUTEN_EDEFAULT;
 			case ConferencePackage.FOOD_RESTRICTIONS__LACTOSE:
 				return lactose != LACTOSE_EDEFAULT;
 			case ConferencePackage.FOOD_RESTRICTIONS__OTHER:
 				return OTHER_EDEFAULT == null ? other != null : !OTHER_EDEFAULT.equals(other);
+			case ConferencePackage.FOOD_RESTRICTIONS__GLUTEN:
+				return gluten != GLUTEN_EDEFAULT;
+			case ConferencePackage.FOOD_RESTRICTIONS__PORK:
+				return pork != PORK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -312,12 +364,14 @@ public class FoodRestrictionsImpl extends MinimalEObjectImpl.Container implement
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (peanuts: ");
 		result.append(peanuts);
-		result.append(", gluten: ");
-		result.append(gluten);
 		result.append(", lactose: ");
 		result.append(lactose);
 		result.append(", other: ");
 		result.append(other);
+		result.append(", gluten: ");
+		result.append(gluten);
+		result.append(", pork: ");
+		result.append(pork);
 		result.append(')');
 		return result.toString();
 	}

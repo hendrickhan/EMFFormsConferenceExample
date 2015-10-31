@@ -64,6 +64,7 @@ public class RegistrationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIdPropertyDescriptor(object);
+			addRegistrationTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -82,6 +83,28 @@ public class RegistrationItemProvider
 				 getString("_UI_Registration_id_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Registration_id_feature", "_UI_Registration_type"),
 				 ConferencePackage.Literals.REGISTRATION__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Registration Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRegistrationTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Registration_registrationTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Registration_registrationTime_feature", "_UI_Registration_type"),
+				 ConferencePackage.Literals.REGISTRATION__REGISTRATION_TIME,
 				 true,
 				 false,
 				 false,
@@ -161,6 +184,7 @@ public class RegistrationItemProvider
 
 		switch (notification.getFeatureID(Registration.class)) {
 			case ConferencePackage.REGISTRATION__ID:
+			case ConferencePackage.REGISTRATION__REGISTRATION_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ConferencePackage.REGISTRATION__PERSONAL_DATA:
